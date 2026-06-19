@@ -26,8 +26,8 @@
  * -----------------------------------------------------------------------
  */
 
-const BASE_URL = import.meta.env.VITE_AI_BASE_URL || 'https://api.openai.com/v1'
-const MODEL = import.meta.env.VITE_AI_MODEL || 'gpt-4o-mini'
+const BASE_URL = import.meta.env.VITE_AI_BASE_URL || 'https://api.groq.com/openai/v1'
+const MODEL = import.meta.env.VITE_AI_MODEL || 'llama-3.3-70b-versatile'
 const API_KEY = import.meta.env.VITE_AI_API_KEY
 
 /**

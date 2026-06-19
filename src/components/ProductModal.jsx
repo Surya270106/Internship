@@ -17,13 +17,14 @@ export default function ProductModal({ product, isRecommended = false, onClose }
   )
 
   useEffect(() => {
+    if (!product) return
     document.addEventListener('keydown', handleKeyDown)
     document.body.style.overflow = 'hidden'
     return () => {
       document.removeEventListener('keydown', handleKeyDown)
       document.body.style.overflow = ''
     }
-  }, [handleKeyDown])
+  }, [product, handleKeyDown])
 
   return (
     <AnimatePresence>
