@@ -172,7 +172,10 @@ export default function App() {
               <FilterBar
                 categories={CATEGORIES}
                 activeCategory={activeCategory}
-                onCategoryChange={setActiveCategory}
+                onCategoryChange={(cat) => {
+                  setActiveCategory(cat)
+                  reset()
+                }}
                 sortOrder={sortOrder}
                 onSortChange={setSortOrder}
               />
