@@ -66,7 +66,15 @@ export default function ProductModal({ product, isRecommended = false, onClose }
               <p className="modal__description">{product.description}</p>
 
               <div className="modal__actions">
-                <button className="button-primary">Add to Bag</button>
+                <a
+                  href={product.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="button-primary"
+                  style={{ display: 'block', textDecoration: 'none' }}
+                >
+                  View on Retailer
+                </a>
               </div>
             </div>
           </motion.div>

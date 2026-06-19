@@ -1,8 +1,7 @@
 /**
  * Local product catalog.
  *
- * Expanded catalog with 30+ items and high-quality photography
- * to match an Apple-like aesthetic presentation.
+ * Expanded catalog with 32 items, official Amazon images, and purchase URLs.
  */
 export const PRODUCTS = [
   // ─── PHONES ───────────────────────────────────────────────────
@@ -12,7 +11,8 @@ export const PRODUCTS = [
     category: 'Phones',
     price: 1199,
     rating: 4.9,
-    image: 'https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=800&q=80',
+    image: 'https://m.media-amazon.com/images/I/81Os1SDWzRL._AC_SL1500_.jpg',
+    url: 'https://www.amazon.com/s?k=iPhone+15+Pro+Max',
     description: 'Titanium design. A17 Pro chip. The ultimate iPhone with 5x Optical Zoom.',
   },
   {
@@ -21,7 +21,8 @@ export const PRODUCTS = [
     category: 'Phones',
     price: 799,
     rating: 4.8,
-    image: 'https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=800&q=80',
+    image: 'https://m.media-amazon.com/images/I/71d7rfSl0wL._AC_SL1500_.jpg',
+    url: 'https://www.amazon.com/s?k=iPhone+15',
     description: 'Dynamic Island. 48MP Main camera. USB-C. A huge leap forward.',
   },
   {
@@ -30,7 +31,8 @@ export const PRODUCTS = [
     category: 'Phones',
     price: 1299,
     rating: 4.8,
-    image: 'https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?w=800&q=80',
+    image: 'https://m.media-amazon.com/images/I/71WcjZXci0L._AC_SL1500_.jpg',
+    url: 'https://www.amazon.com/s?k=Samsung+Galaxy+S24+Ultra',
     description: 'Galaxy AI is here. Titanium exterior, flat display, and built-in S Pen.',
   },
   {
@@ -39,7 +41,8 @@ export const PRODUCTS = [
     category: 'Phones',
     price: 999,
     rating: 4.7,
-    image: 'https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=800&q=80',
+    image: 'https://m.media-amazon.com/images/I/71NqA1u1BGL._AC_SL1500_.jpg',
+    url: 'https://www.amazon.com/s?k=Google+Pixel+8+Pro',
     description: 'The pro-level Pixel with advanced AI photography and a polished aluminum frame.',
   },
   {
@@ -48,7 +51,8 @@ export const PRODUCTS = [
     category: 'Phones',
     price: 599,
     rating: 4.5,
-    image: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&q=80',
+    image: 'https://m.media-amazon.com/images/I/7118R2UXXYL._AC_SL1500_.jpg',
+    url: 'https://www.amazon.com/s?k=Nothing+Phone+(2)',
     description: 'Iconic transparent design with Glyph Interface and premium Snapdragon power.',
   },
 
@@ -59,7 +63,8 @@ export const PRODUCTS = [
     category: 'Laptops',
     price: 3499,
     rating: 4.9,
-    image: 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800&q=80',
+    image: 'https://m.media-amazon.com/images/I/618d5bS2lUL._AC_SL1500_.jpg',
+    url: 'https://www.amazon.com/s?k=MacBook+Pro+16+M3+Max',
     description: 'Mind-blowing performance for pro workflows. Brilliant Liquid Retina XDR display.',
   },
   {
@@ -68,7 +73,8 @@ export const PRODUCTS = [
     category: 'Laptops',
     price: 1299,
     rating: 4.8,
-    image: 'https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=800&q=80',
+    image: 'https://m.media-amazon.com/images/I/71S4sIPFvBL._AC_SL1500_.jpg',
+    url: 'https://www.amazon.com/s?k=MacBook+Air+15+M3',
     description: 'Incredibly thin and light. Supercharged by M3. 18 hours of battery life.',
   },
   {
@@ -77,7 +83,8 @@ export const PRODUCTS = [
     category: 'Laptops',
     price: 1699,
     rating: 4.6,
-    image: 'https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=800&q=80',
+    image: 'https://m.media-amazon.com/images/I/71sE36tC3cL._AC_SL1500_.jpg',
+    url: 'https://www.amazon.com/s?k=Dell+XPS+14',
     description: 'CNC machined aluminum, seamless glass touchpad, and gorgeous OLED display.',
   },
   {
@@ -86,7 +93,8 @@ export const PRODUCTS = [
     category: 'Laptops',
     price: 2999,
     rating: 4.7,
-    image: 'https://images.unsplash.com/photo-1625842268584-8f3296236761?w=800&q=80',
+    image: 'https://m.media-amazon.com/images/I/71X8DqV-k7L._AC_SL1500_.jpg',
+    url: 'https://www.amazon.com/s?k=Razer+Blade+16',
     description: 'The ultimate gaming laptop. RTX 4090 power in a sleek, minimalist chassis.',
   },
   {
@@ -95,7 +103,8 @@ export const PRODUCTS = [
     category: 'Laptops',
     price: 1999,
     rating: 4.5,
-    image: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=800&q=80',
+    image: 'https://m.media-amazon.com/images/I/61K0Zk2jCIL._AC_SL1500_.jpg',
+    url: 'https://www.amazon.com/s?k=Surface+Laptop+Studio+2',
     description: 'Incredibly powerful and infinitely flexible. The ultimate creator laptop.',
   },
 
@@ -106,7 +115,8 @@ export const PRODUCTS = [
     category: 'Audio',
     price: 249,
     rating: 4.8,
-    image: 'https://images.unsplash.com/photo-1600294037681-c80b4cb5b434?w=800&q=80',
+    image: 'https://m.media-amazon.com/images/I/61SUj2aKoEL._AC_SL1500_.jpg',
+    url: 'https://www.amazon.com/s?k=AirPods+Pro+2',
     description: 'Up to 2x more Active Noise Cancellation. Adaptive Audio. USB-C.',
   },
   {
@@ -115,7 +125,8 @@ export const PRODUCTS = [
     category: 'Audio',
     price: 549,
     rating: 4.7,
-    image: 'https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=800&q=80',
+    image: 'https://m.media-amazon.com/images/I/81jqUPkIVRL._AC_SL1500_.jpg',
+    url: 'https://www.amazon.com/s?k=AirPods+Max',
     description: 'High-fidelity audio. Active Noise Cancellation with Transparency mode.',
   },
   {
@@ -124,7 +135,8 @@ export const PRODUCTS = [
     category: 'Audio',
     price: 398,
     rating: 4.8,
-    image: 'https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?w=800&q=80',
+    image: 'https://m.media-amazon.com/images/I/51aXvjzcukL._AC_SL1500_.jpg',
+    url: 'https://www.amazon.com/s?k=Sony+WH-1000XM5',
     description: 'Industry-leading noise cancellation. Crystal clear hands-free calling.',
   },
   {
@@ -133,7 +145,8 @@ export const PRODUCTS = [
     category: 'Audio',
     price: 429,
     rating: 4.7,
-    image: 'https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=800&q=80',
+    image: 'https://m.media-amazon.com/images/I/51bA9sZ+0WL._AC_SL1500_.jpg',
+    url: 'https://www.amazon.com/s?k=Bose+QuietComfort+Ultra',
     description: 'Breakthrough spatial audio. World-class noise cancellation.',
   },
   {
@@ -142,7 +155,8 @@ export const PRODUCTS = [
     category: 'Audio',
     price: 449,
     rating: 4.8,
-    image: 'https://images.unsplash.com/photo-1543512214-318c7553f230?w=800&q=80',
+    image: 'https://m.media-amazon.com/images/I/61T00V3Z7iL._AC_SL1500_.jpg',
+    url: 'https://www.amazon.com/s?k=Sonos+Era+300',
     description: 'Next-level spatial audio with Dolby Atmos. A masterpiece of acoustic design.',
   },
 
@@ -153,7 +167,8 @@ export const PRODUCTS = [
     category: 'Wearables',
     price: 799,
     rating: 4.9,
-    image: 'https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?w=800&q=80',
+    image: 'https://m.media-amazon.com/images/I/71tA7M7wV8L._AC_SL1500_.jpg',
+    url: 'https://www.amazon.com/s?k=Apple+Watch+Ultra+2',
     description: 'Rugged titanium case. Precision dual-frequency GPS. Up to 36 hours of battery.',
   },
   {
@@ -162,7 +177,8 @@ export const PRODUCTS = [
     category: 'Wearables',
     price: 399,
     rating: 4.8,
-    image: 'https://images.unsplash.com/photo-1551816230-ef5deaed4a26?w=800&q=80',
+    image: 'https://m.media-amazon.com/images/I/71XMTLEIG-L._AC_SL1500_.jpg',
+    url: 'https://www.amazon.com/s?k=Apple+Watch+Series+9',
     description: 'Smarter. Brighter. Mightier. With the magical Double Tap gesture.',
   },
   {
@@ -171,7 +187,8 @@ export const PRODUCTS = [
     category: 'Wearables',
     price: 299,
     rating: 4.6,
-    image: 'https://images.unsplash.com/photo-1601158935942-52255782d322?w=800&q=80',
+    image: 'https://m.media-amazon.com/images/I/51r-xI19qdL._AC_SL1500_.jpg',
+    url: 'https://www.amazon.com/s?k=Oura+Ring+Gen3',
     description: 'Discreet, accurate health tracking. Sleep, activity, and readiness insights.',
   },
   {
@@ -180,7 +197,8 @@ export const PRODUCTS = [
     category: 'Wearables',
     price: 799,
     rating: 4.8,
-    image: 'https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=800&q=80',
+    image: 'https://m.media-amazon.com/images/I/71lC3p-k3IL._AC_SL1500_.jpg',
+    url: 'https://www.amazon.com/s?k=Garmin+Fenix+7+Pro',
     description: 'Multisport GPS smartwatch with solar charging and built-in flashlight.',
   },
   {
@@ -189,7 +207,8 @@ export const PRODUCTS = [
     category: 'Wearables',
     price: 239,
     rating: 4.5,
-    image: 'https://images.unsplash.com/photo-1510017803434-a899398421b3?w=800&q=80',
+    image: 'https://m.media-amazon.com/images/I/61B9o3Oa3lL._AC_SL1500_.jpg',
+    url: 'https://www.amazon.com/s?k=Whoop+4.0',
     description: 'Personalized fitness and health coaching. Screen-free design.',
   },
 
@@ -200,7 +219,8 @@ export const PRODUCTS = [
     category: 'Tablets',
     price: 1299,
     rating: 4.9,
-    image: 'https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=800&q=80',
+    image: 'https://m.media-amazon.com/images/I/61c8F3uW95L._AC_SL1500_.jpg',
+    url: 'https://www.amazon.com/s?k=iPad+Pro+13+M4',
     description: 'Incredibly thin. Stunning Ultra Retina XDR display. Outrageous M4 performance.',
   },
   {
@@ -209,7 +229,8 @@ export const PRODUCTS = [
     category: 'Tablets',
     price: 599,
     rating: 4.8,
-    image: 'https://images.unsplash.com/photo-1589739900243-4b52cd9b104e?w=800&q=80',
+    image: 'https://m.media-amazon.com/images/I/61k2YfO7qIL._AC_SL1500_.jpg',
+    url: 'https://www.amazon.com/s?k=iPad+Air+M2',
     description: 'Redesigned in two sizes. M2 chip. Landscape front camera.',
   },
   {
@@ -218,7 +239,8 @@ export const PRODUCTS = [
     category: 'Tablets',
     price: 499,
     rating: 4.7,
-    image: 'https://images.unsplash.com/photo-1616423640778-28d1b53229bd?w=800&q=80',
+    image: 'https://m.media-amazon.com/images/I/718yG7y-4OL._AC_SL1500_.jpg',
+    url: 'https://www.amazon.com/s?k=iPad+mini',
     description: 'Mega power. Mini sized. 8.3-inch Liquid Retina display.',
   },
   {
@@ -227,7 +249,8 @@ export const PRODUCTS = [
     category: 'Tablets',
     price: 1199,
     rating: 4.7,
-    image: 'https://images.unsplash.com/photo-1561154464-82e9adf32764?w=800&q=80',
+    image: 'https://m.media-amazon.com/images/I/51lQd+Kz1pL._AC_SL1500_.jpg',
+    url: 'https://www.amazon.com/s?k=Samsung+Galaxy+Tab+S9+Ultra',
     description: 'Massive 14.6" AMOLED display. Water and dust resistant. S Pen included.',
   },
   {
@@ -236,7 +259,8 @@ export const PRODUCTS = [
     category: 'Tablets',
     price: 299,
     rating: 4.5,
-    image: 'https://images.unsplash.com/photo-1544816155-12df9643f363?w=800&q=80',
+    image: 'https://m.media-amazon.com/images/I/61fBwG6-g+L._AC_SL1500_.jpg',
+    url: 'https://www.amazon.com/s?k=reMarkable+2',
     description: 'The next-generation paper tablet. Replace your notebooks and printed documents.',
   },
 
@@ -247,7 +271,8 @@ export const PRODUCTS = [
     category: 'Desktops',
     price: 1299,
     rating: 4.7,
-    image: 'https://images.unsplash.com/photo-1622737133809-d95047b9e673?w=800&q=80',
+    image: 'https://m.media-amazon.com/images/I/61P0QfXzD4L._AC_SL1500_.jpg',
+    url: 'https://www.amazon.com/s?k=iMac+24',
     description: 'Brilliant 4.5K Retina display. Impossibly thin design in seven vibrant colors.',
   },
   {
@@ -256,7 +281,8 @@ export const PRODUCTS = [
     category: 'Desktops',
     price: 1999,
     rating: 4.9,
-    image: 'https://images.unsplash.com/photo-1517059224940-d4af9eec41b7?w=800&q=80',
+    image: 'https://m.media-amazon.com/images/I/61hX4E3Bw3L._AC_SL1500_.jpg',
+    url: 'https://www.amazon.com/s?k=Mac+Studio',
     description: 'Empowerment station. Outrageous performance in a compact form factor.',
   },
   {
@@ -265,7 +291,8 @@ export const PRODUCTS = [
     category: 'Desktops',
     price: 1599,
     rating: 4.6,
-    image: 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800&q=80',
+    image: 'https://m.media-amazon.com/images/I/71vW1XqA2-L._AC_SL1500_.jpg',
+    url: 'https://www.amazon.com/s?k=Apple+Studio+Display',
     description: '27-inch 5K Retina display. 12MP Ultra Wide camera with Center Stage.',
   },
 
@@ -276,7 +303,8 @@ export const PRODUCTS = [
     category: 'Accessories',
     price: 99,
     rating: 4.6,
-    image: 'https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=800&q=80',
+    image: 'https://m.media-amazon.com/images/I/41KqJ1hZbpL._AC_SL1500_.jpg',
+    url: 'https://www.amazon.com/s?k=Apple+Magic+Keyboard',
     description: 'Wireless, rechargeable, and incredibly comfortable. Now with Touch ID options.',
   },
   {
@@ -285,7 +313,8 @@ export const PRODUCTS = [
     category: 'Accessories',
     price: 79,
     rating: 4.1,
-    image: 'https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=800&q=80',
+    image: 'https://m.media-amazon.com/images/I/51y2NExK%2B6L._AC_SL1500_.jpg',
+    url: 'https://www.amazon.com/s?k=Apple+Magic+Mouse',
     description: 'Wireless and rechargeable, with an optimized foot design that lets it glide smoothly.',
   },
   {
@@ -294,7 +323,8 @@ export const PRODUCTS = [
     category: 'Accessories',
     price: 129,
     rating: 4.8,
-    image: 'https://images.unsplash.com/photo-1563206767-5b18f218e8de?w=800&q=80',
+    image: 'https://m.media-amazon.com/images/I/21c43LnttDL._AC_SL1500_.jpg',
+    url: 'https://www.amazon.com/s?k=Apple+Pencil+Pro',
     description: 'Pixel-perfect precision. Squeeze, barrel roll, and haptic feedback.',
   },
   {
@@ -303,7 +333,8 @@ export const PRODUCTS = [
     category: 'Accessories',
     price: 39,
     rating: 4.7,
-    image: 'https://images.unsplash.com/photo-1583394838336-acd977736f90?w=800&q=80',
+    image: 'https://m.media-amazon.com/images/I/511Q2ZzQzTL._AC_SL1500_.jpg',
+    url: 'https://www.amazon.com/s?k=Apple+MagSafe+Charger',
     description: 'Perfectly aligned magnets attach to your iPhone for faster wireless charging.',
   }
 ]
