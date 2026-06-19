@@ -33,6 +33,11 @@ export default function App() {
     reset,
   } = useRecommendations()
 
+  const handleSearch = (query) => {
+    setActiveCategory('All')
+    fetchRecommendations(query)
+  }
+
   // Apply dark mode class to body
   useEffect(() => {
     document.body.classList.toggle('dark', isDark)
@@ -58,24 +63,17 @@ export default function App() {
       matchScore: recommendationScores.get(p.id)
     }))
 
-    // Filter by category
-    if (activeCategory !== 'All') {
-      list = list.filter((p) => p.category === activeCategory)
-    }
-
-    // When recommendations are active, sort matched products to the top
+    // If there is an active AI search, only show the recommended products
     if (status === 'success' && recommendedIdSet.size > 0) {
-      list = [...list].sort((a, b) => {
-        const aMatch = recommendedIdSet.has(a.id) ? 0 : 1
-        const bMatch = recommendedIdSet.has(b.id) ? 0 : 1
-        
-        if (aMatch === 0 && bMatch === 0) {
-           return (b.matchScore || 0) - (a.matchScore || 0)
-        }
-        return aMatch - bMatch
-      })
+      list = list.filter(p => recommendedIdSet.has(p.id))
+      // Sort by match score
+      list.sort((a, b) => (b.matchScore || 0) - (a.matchScore || 0))
     } else {
-      // Apply user sort only if no active AI recommendations are sorting it
+      // Otherwise, apply category and user sorting
+      if (activeCategory !== 'All') {
+        list = list.filter((p) => p.category === activeCategory)
+      }
+
       if (sortOrder === 'price-asc') {
         list = [...list].sort((a, b) => a.price - b.price)
       } else if (sortOrder === 'price-desc') {
@@ -128,7 +126,7 @@ export default function App() {
             </motion.p>
 
             <PreferenceInput 
-              onSubmit={fetchRecommendations} 
+              onSubmit={handleSearch} 
               isLoading={isLoading} 
               status={status} 
               matchCount={recommendedIds.length} 
@@ -187,28 +185,11 @@ export default function App() {
             </div>
 
             <aside className="content-layout__sidebar">
-              <HistoryList history={history} onSelect={fetchRecommendations} />
+              <HistoryList history={history} onSelect={handleSearch} />
             </aside>
           </motion.div>
         </div>
       </main>
-
-      {/* ── Footer ─────────────────────────────────────────────── */}
-      <footer className="footer-parchment">
-        <div className="footer-parchment__inner">
-          <p>More ways to shop: find an Apple Store or other retailer near you. Or call 1-800-MY-APPLE.</p>
-          <div className="footer-parchment__legal">
-            <span>Copyright © 2026 Spearmint Technologies Inc. All rights reserved.</span>
-            <div className="footer-parchment__links">
-              <a href="#">Privacy Policy</a>
-              <a href="#">Terms of Use</a>
-              <a href="#">Sales and Refunds</a>
-              <a href="#">Legal</a>
-              <a href="#">Site Map</a>
-            </div>
-          </div>
-        </div>
-      </footer>
 
       {/* ── Product detail modal ───────────────────────────────── */}
       <ProductModal
