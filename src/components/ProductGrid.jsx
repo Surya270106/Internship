@@ -35,3 +35,4 @@ export default memo(function ProductGrid({ products, recommendedIds, onProductCl
     </div>
   )
 }
+)
