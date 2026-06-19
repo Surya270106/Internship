@@ -1,0 +1,162 @@
+[
+  {
+    "name": "iPhone 15 Pro Max",
+    "image": "https://freebiesbug.com/wp-content/uploads/2024/03/iphone-15-mockup-1-580x387.jpg",
+    "url": ""
+  },
+  {
+    "name": "iPhone 15",
+    "image": "https://t3.ftcdn.net/jpg/06/15/56/96/360_F_615569622_MMmFkHfOVlpgWjKkWgTFUoLTykFA62Ik.jpg",
+    "url": ""
+  },
+  {
+    "name": "Samsung Galaxy S24 Ultra",
+    "image": "https://toptel.com/files/foto_add_big/foto_add-265134.jpg",
+    "url": ""
+  },
+  {
+    "name": "Google Pixel 8 Pro",
+    "image": "https://gsmchina.com/wp-content/themes/xiaomiuiwp/phone_pics/b_google-pixel-8-pro-2.png",
+    "url": ""
+  },
+  {
+    "name": "Nothing Phone (2)",
+    "image": "https://www.simsherpa.com/images/Nothing-smartphone-deals-header.png",
+    "url": ""
+  },
+  {
+    "name": "MacBook Pro 16\" (M3 Max)",
+    "image": "https://store.wriggle.ie/app/uploads/2024/11/AP-SS-MBP16-21-NMCLR.png",
+    "url": ""
+  },
+  {
+    "name": "MacBook Air 15\" (M3)",
+    "image": "https://shopowltech.com/media/catalog/product/cache/26228c64a1d76a1479e7cc55771b2e97/d/7/d7a4b9b6Starlight_20Back.png",
+    "url": ""
+  },
+  {
+    "name": "Dell XPS 14",
+    "image": "https://cdn.mos.cms.futurecdn.net/po6x398AtBtaiMQi5HW59X.png",
+    "url": ""
+  },
+  {
+    "name": "Razer Blade 16",
+    "image": "https://assets3.razerzone.com/W5iSf9O93r45lfSHZ21U5ricH2o=/1500x1000/https://medias-p1.phoenix.razer.com/sys-master-phoenix-images-container/h77/h24/10040018698270/260325-blade16-s12-black-1500x1000-3.jpg",
+    "url": ""
+  },
+  {
+    "name": "Surface Laptop Studio 2",
+    "image": "https://static.bhphotovideo.com/explora/sites/default/files/microsoft-upgrades-the-surface-lineup-with-the-surface-laptop-studio-2-and-surface-laptop-go-3-ts.png",
+    "url": ""
+  },
+  {
+    "name": "AirPods Pro (2nd generation)",
+    "image": "https://img.drz.lazcdn.com/static/bd/p/dfe0687a3a26283be088563c0060a87f.png_720x720q80.png",
+    "url": ""
+  },
+  {
+    "name": "AirPods Max",
+    "image": "https://thumbs.dreamstime.com/b/high-quality-apple-airpodsmax-headphones-cushioned-earpads-ukraine-dnipro-january-d-pair-over-ear-featuring-sleek-318463115.jpg",
+    "url": ""
+  },
+  {
+    "name": "Sony WH-1000XM5",
+    "image": "https://cdn.mos.cms.futurecdn.net/fVmeqvH26P2YiexbYSkvY3.jpg",
+    "url": ""
+  },
+  {
+    "name": "Bose QuietComfort Ultra",
+    "image": "https://awts.com.pk/wp-content/uploads/2024/12/Bose-QuietComfort-Ultra-Earbuds-white-img4.png",
+    "url": ""
+  },
+  {
+    "name": "Sonos Era 300",
+    "image": "https://audiowhiz.com.au/wp-content/uploads/2023/04/sonos-era300-black-4.png",
+    "url": ""
+  },
+  {
+    "name": "Apple Watch Ultra 2",
+    "image": "https://www.sproutinc.com.au/script/web/imageresize.aspx?maxw=700&maxh=420&src=/Uploads/Suppliers/Sprout/Images/CD7B84B0-13A1-4DE1-9251-CF9260BF4F91.png",
+    "url": ""
+  },
+  {
+    "name": "Apple Watch Series 9",
+    "image": "http://revendo.ch/cdn/shop/files/apple-watch-series-9-41-mm-edelstahlgehaeuse-gold-guenstig-gebraucht-kaufen-00.png?v=1738156378",
+    "url": ""
+  },
+  {
+    "name": "Oura Ring Gen3",
+    "image": "https://www.saatva.com/blog/wp-content/uploads/2025/01/oura-ring-review-product.png",
+    "url": ""
+  },
+  {
+    "name": "Garmin Fenix 7 Pro",
+    "image": "https://garminrumors.com/wp-content/uploads/2024/10/Fenix-7-Black-1.jpg",
+    "url": ""
+  },
+  {
+    "name": "Whoop 4.0",
+    "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/646b0f15-1796-44ef-9135-7a9ea3a9a1eb.png",
+    "url": ""
+  },
+  {
+    "name": "iPad Pro 13\" (M4)",
+    "image": "https://gadgetshieldz.com/cdn/shop/files/apple-ipad-pro-13-inch-m4-2024-brutal-bite-full.webp?v=1764828467&width=1080&width=1080",
+    "url": ""
+  },
+  {
+    "name": "iPad Air (M2)",
+    "image": "",
+    "url": ""
+  },
+  {
+    "name": "iPad mini",
+    "image": "https://img.favpng.com/1/2/10/ipad-4-ipad-3-ipad-mini-ipad-air-2-png-favpng-pDy7gFC9jBthQnraxFqdNzaZs.jpg",
+    "url": ""
+  },
+  {
+    "name": "Samsung Galaxy Tab S9 Ultra",
+    "image": "https://www.digitaldisplaystore.com.au/images/tablets/SM-X916BZEAXSA/au-galaxy-tab-s9-ultra-wifi-x910-sm-x916bzeaxsa_5.png",
+    "url": ""
+  },
+  {
+    "name": "reMarkable 2",
+    "image": "",
+    "url": ""
+  },
+  {
+    "name": "iMac 24\"",
+    "image": "https://www.shutterstock.com/image-illustration/paris-france-september-10-2024-260nw-2531557781.jpg",
+    "url": ""
+  },
+  {
+    "name": "Mac Studio",
+    "image": "https://p7.hiclipart.com/preview/1009/785/162/mac-mini-macbook-pro-apple-computer-mac-mini-thumbnail.jpg",
+    "url": ""
+  },
+  {
+    "name": "Studio Display",
+    "image": "https://toppng.com/uploads/preview/vintage-desktop-pc-11549345576ao3gqdjaob.png",
+    "url": ""
+  },
+  {
+    "name": "Magic Keyboard",
+    "image": "https://www.shutterstock.com/image-vector/realistic-black-keyboard-isolated-on-260nw-2766912163.jpg",
+    "url": ""
+  },
+  {
+    "name": "Magic Mouse",
+    "image": "https://thumbnail.imgbin.com/0/3/11/imgbin-computer-mouse-magic-mouse-pelihiiri-computer-keyboard-mouse-mats-microsoft-usb-headset-driver-nkm5KTTu1KKFKBLmQs8EiXRJP_t.jpg",
+    "url": ""
+  },
+  {
+    "name": "Apple Pencil Pro",
+    "image": "https://p7.hiclipart.com/preview/707/247/734/apple-10-5-inch-ipad-pro-ipad-pro-12-9-inch-2nd-generation-apple-pencil-ipad.jpg",
+    "url": ""
+  },
+  {
+    "name": "MagSafe Charger",
+    "image": "https://thumbnail.imgbin.com/10/13/19/imgbin-battery-charger-apple-magsafe-2-power-adapter-apple-watch-smartwatch-apple-bilder-ScKgmBahgBmPdZFZHreTVv1ts_t.jpg",
+    "url": ""
+  }
+]

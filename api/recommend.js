@@ -62,22 +62,26 @@ You will be given a JSON catalog of available products and a user's natural-lang
 RULES (follow strictly):
 1. ONLY recommend products whose "id" appears in the catalog below. Never invent products, ids, or names.
 2. Select between 1 and 5 products that best match the user's request (budget, category, features mentioned).
-3. If nothing in the catalog reasonably matches, return an empty "recommended_ids" array and explain why in "reason".
-4. Respond with ONLY valid JSON, no markdown formatting, no code fences, no extra commentary. Exactly this shape:
+3. Assign a "matchScore" (0-100) to each recommended product representing how well it fits the user's query.
+4. If nothing in the catalog reasonably matches, return an empty "recommendations" array and explain why in "reason".
+5. Respond with ONLY valid JSON, no markdown formatting, no code fences, no extra commentary. Exactly this shape:
 {
-  "recommended_ids": [1, 4, 7],
-  "reason": "A short, friendly 1-2 sentence explanation of why these products were chosen."
+  "recommendations": [
+    { "id": 1, "matchScore": 95 },
+    { "id": 4, "matchScore": 88 }
+  ],
+  "explanation": "These match your budget under $500 and your preference for Android.",
+  "reason": "Used only if no products match."
 }
 
 CATALOG:
 ${JSON.stringify(catalogForPrompt)}`
 }
 
-// ---------------------------------------------------------------------------
-// Response-cleaning helpers
-// ---------------------------------------------------------------------------
-
-/** Strip markdown code fences that models sometimes add despite instructions */
+/**
+ * Strips common formatting issues (markdown code fences, leading/trailing
+ * whitespace) that chat models sometimes add even when told not to.
+ */
 function stripCodeFences(raw) {
   return raw
     .trim()
@@ -92,18 +96,26 @@ function stripCodeFences(raw) {
  * (after the prompt) to ensure we never surface hallucinated products.
  */
 function normalizeRecommendation(parsed, validIds) {
-  const idsArray = Array.isArray(parsed?.recommended_ids) ? parsed.recommended_ids : []
+  const recsArray = Array.isArray(parsed?.recommendations) ? parsed.recommendations : []
 
-  const recommendedIds = idsArray
-    .map((id) => Number(id))
-    .filter((id) => Number.isInteger(id) && validIds.has(id))
+  const recommendations = recsArray
+    .filter((r) => r && Number.isInteger(Number(r.id)) && validIds.has(Number(r.id)))
+    .map((r) => ({
+      id: Number(r.id),
+      matchScore: Number.isInteger(Number(r.matchScore)) ? Number(r.matchScore) : 90
+    }))
+
+  // Keep recommendedIds array for backward compatibility with existing components
+  const recommendedIds = recommendations.map(r => r.id)
+
+  const explanation = typeof parsed?.explanation === 'string' ? parsed.explanation.trim() : ''
 
   const reason =
     typeof parsed?.reason === 'string' && parsed.reason.trim().length > 0
       ? parsed.reason.trim()
       : 'Here are some products that match your request.'
 
-  return { recommendedIds, reason }
+  return { recommendations, recommendedIds, explanation, reason }
 }
 
 // ---------------------------------------------------------------------------

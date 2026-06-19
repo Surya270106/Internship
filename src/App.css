@@ -289,6 +289,57 @@ body.dark .product-card:hover {
   50% { opacity: 1; }
 }
 
+/* Skeleton Loading Cards */
+.skeleton-card {
+  pointer-events: none;
+  border-color: var(--color-border);
+}
+
+.skeleton-image {
+  width: 100%;
+  aspect-ratio: 1;
+  background: var(--color-border);
+  border-radius: var(--radius-sm);
+  margin-bottom: 24px;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+.skeleton-text-stack {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 0 16px;
+}
+
+.skeleton-text-title {
+  height: 18px;
+  width: 80%;
+  background: var(--color-border);
+  border-radius: 4px;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+.skeleton-text-price {
+  height: 18px;
+  width: 40%;
+  background: var(--color-border);
+  border-radius: 4px;
+  animation: pulse 2s infinite ease-in-out;
+  animation-delay: 0.2s;
+}
+
+.skeleton-text-cta {
+  height: 18px;
+  width: 30%;
+  background: var(--color-border);
+  border-radius: 4px;
+  margin-top: 12px;
+  animation: pulse 2s infinite ease-in-out;
+  animation-delay: 0.4s;
+}
+
 .product-card__content {
   display: flex;
   flex-direction: column;

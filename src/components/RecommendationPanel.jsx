@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion'
  * Uses animated dots for loading instead of a spinner for a more
  * organic, less "techy" feel.
  */
-export default function RecommendationPanel({ status, reason, error, matchCount, onClear }) {
+export default function RecommendationPanel({ status, reason, explanation, error, matchCount, onClear }) {
   return (
     <AnimatePresence mode="wait">
       {status === 'idle' ? null : (
@@ -57,7 +57,8 @@ export default function RecommendationPanel({ status, reason, error, matchCount,
                     ? `${matchCount} ${matchCount === 1 ? 'match' : 'matches'} found`
                     : 'No exact matches'}
                 </p>
-                <p className="rec-panel__reason">{reason}</p>
+                {explanation && <p className="rec-panel__reason" style={{ marginTop: 4 }}>{explanation}</p>}
+                <p className="rec-panel__reason" style={{ marginTop: 4, color: 'var(--color-ink-muted)' }}>{reason}</p>
               </div>
               <button type="button" className="rec-panel__dismiss" onClick={onClear}>
                 Clear

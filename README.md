@@ -6,6 +6,33 @@ Built for the **Spearmint Technologies** internship assessment (Task 1).
 
 ---
 
+## Features at a Glance
+
+- 🧠 **AI-Powered Matching**: Understands natural language, not just keywords.
+- 🎯 **Confidence Scores**: Shows exact match percentage (e.g. 94% Match).
+- 💬 **Smart Explanations**: Tells you exactly *why* products were recommended.
+- ⚡ **Skeleton Loaders**: Smooth UI transitions without layout shifts.
+- 💡 **Suggestion Pills**: Helpful prompts to get you started instantly.
+- 🛡️ **Serverless Security**: Vercel API proxy keeps keys out of the browser.
+- 🌙 **Dark Mode**: System-aware aesthetic switching.
+- 🌊 **Framer Motion**: Fluid, Apple-inspired micro-animations.
+
+---
+
+## How It Works
+
+1. **User types preference**: Enter a query like "Gaming laptop with great thermals" (or click a suggestion pill).
+2. **AI matches catalog**: The secure serverless proxy queries the AI model, mapping your intent to our 18-product catalog.
+3. **Recommendations highlighted**: The AI returns a JSON array of matched IDs, confidence scores, and an explanation. The UI highlights these cards, sorts them to the top, and displays the exact reason they fit your needs.
+
+---
+
+## Screenshots
+
+> See `/public/images/` for screenshots of the UI, including dark mode, skeleton loaders, and AI recommendation panels.
+
+---
+
 ## Live Demo
 
 > Deployed at: [your-project.vercel.app](https://your-project.vercel.app)  

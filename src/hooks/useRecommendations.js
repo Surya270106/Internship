@@ -16,6 +16,8 @@ import { PRODUCTS } from '../data/products'
 export function useRecommendations() {
   const [status, setStatus] = useState('idle') // 'idle' | 'loading' | 'success' | 'error'
   const [recommendedIds, setRecommendedIds] = useState([])
+  const [recommendations, setRecommendations] = useState([])
+  const [explanation, setExplanation] = useState('')
   const [reason, setReason] = useState('')
   const [error, setError] = useState(null)
   const [history, setHistory] = useState([])
@@ -27,6 +29,8 @@ export function useRecommendations() {
     try {
       const result = await getAIRecommendations(query, PRODUCTS)
       setRecommendedIds(result.recommendedIds)
+      setRecommendations(result.recommendations || [])
+      setExplanation(result.explanation || '')
       setReason(result.reason)
       setStatus('success')
       setHistory((prev) => [
@@ -36,6 +40,8 @@ export function useRecommendations() {
     } catch (err) {
       setError(err.message || 'Something went wrong. Please try again.')
       setRecommendedIds([])
+      setRecommendations([])
+      setExplanation('')
       setReason('')
       setStatus('error')
     }
@@ -44,6 +50,8 @@ export function useRecommendations() {
   const reset = useCallback(() => {
     setStatus('idle')
     setRecommendedIds([])
+    setRecommendations([])
+    setExplanation('')
     setReason('')
     setError(null)
   }, [])
@@ -52,6 +60,8 @@ export function useRecommendations() {
     status,
     isLoading: status === 'loading',
     recommendedIds,
+    recommendations,
+    explanation,
     reason,
     error,
     history,

@@ -1,0 +1,162 @@
+[
+  {
+    "id": 1,
+    "name": "iPhone 15 Pro Max",
+    "image": "/images/img_0.jpg"
+  },
+  {
+    "id": 2,
+    "name": "iPhone 15",
+    "image": "/images/img_1.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Samsung Galaxy S24 Ultra",
+    "image": "https://placehold.co/600x400?text=Samsung%20Galaxy%20S24%20Ultra"
+  },
+  {
+    "id": 4,
+    "name": "Google Pixel 8 Pro",
+    "image": "/images/img_3.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Nothing Phone (2)",
+    "image": "/images/img_4.jpg"
+  },
+  {
+    "id": 6,
+    "name": "MacBook Pro 16\" (M3 Max)",
+    "image": "/images/img_5.jpg"
+  },
+  {
+    "id": 7,
+    "name": "MacBook Air 15\" (M3)",
+    "image": "/images/img_6.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Dell XPS 14",
+    "image": "/images/img_7.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Razer Blade 16",
+    "image": "https://placehold.co/600x400?text=Razer%20Blade%2016"
+  },
+  {
+    "id": 10,
+    "name": "Surface Laptop Studio 2",
+    "image": "https://placehold.co/600x400?text=Surface%20Laptop%20Studio%202"
+  },
+  {
+    "id": 11,
+    "name": "AirPods Pro (2nd generation)",
+    "image": "/images/img_10.jpg"
+  },
+  {
+    "id": 12,
+    "name": "AirPods Max",
+    "image": "/images/img_11.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Sony WH-1000XM5",
+    "image": "/images/img_12.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Bose QuietComfort Ultra",
+    "image": "/images/img_13.jpg"
+  },
+  {
+    "id": 15,
+    "name": "Sonos Era 300",
+    "image": "/images/img_14.jpg"
+  },
+  {
+    "id": 16,
+    "name": "Apple Watch Ultra 2",
+    "image": "https://placehold.co/600x400?text=Apple%20Watch%20Ultra%202"
+  },
+  {
+    "id": 17,
+    "name": "Apple Watch Series 9",
+    "image": "https://placehold.co/600x400?text=Apple%20Watch%20Series%209"
+  },
+  {
+    "id": 18,
+    "name": "Oura Ring Gen3",
+    "image": "/images/img_17.jpg"
+  },
+  {
+    "id": 19,
+    "name": "Garmin Fenix 7 Pro",
+    "image": "/images/img_18.jpg"
+  },
+  {
+    "id": 20,
+    "name": "Whoop 4.0",
+    "image": "/images/img_19.jpg"
+  },
+  {
+    "id": 21,
+    "name": "iPad Pro 13\" (M4)",
+    "image": "/images/img_20.jpg"
+  },
+  {
+    "id": 22,
+    "name": "iPad Air (M2)",
+    "image": "https://placehold.co/600x400?text=iPad%20Air%20(M2)"
+  },
+  {
+    "id": 23,
+    "name": "iPad mini",
+    "image": "/images/img_22.jpg"
+  },
+  {
+    "id": 24,
+    "name": "Samsung Galaxy Tab S9 Ultra",
+    "image": "/images/img_23.jpg"
+  },
+  {
+    "id": 25,
+    "name": "reMarkable 2",
+    "image": "https://placehold.co/600x400?text=reMarkable%202"
+  },
+  {
+    "id": 26,
+    "name": "iMac 24\"",
+    "image": "/images/img_25.jpg"
+  },
+  {
+    "id": 27,
+    "name": "Mac Studio",
+    "image": "/images/img_26.jpg"
+  },
+  {
+    "id": 28,
+    "name": "Studio Display",
+    "image": "/images/img_27.jpg"
+  },
+  {
+    "id": 29,
+    "name": "Magic Keyboard",
+    "image": "/images/img_28.jpg"
+  },
+  {
+    "id": 30,
+    "name": "Magic Mouse",
+    "image": "/images/img_29.jpg"
+  },
+  {
+    "id": 31,
+    "name": "Apple Pencil Pro",
+    "image": "/images/img_30.jpg"
+  },
+  {
+    "id": 32,
+    "name": "MagSafe Charger",
+    "image": "/images/img_31.jpg"
+  }
+]

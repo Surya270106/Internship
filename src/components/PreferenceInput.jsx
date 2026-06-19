@@ -2,10 +2,10 @@ import { useState, useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
 
 const EXAMPLE_PROMPTS = [
-  'iPhone under $800',
-  'MacBook for creators',
-  'Headphones with ANC',
-  'Best fitness watch',
+  'Best phone under $500',
+  'Lightweight laptop for students',
+  'Noise-cancelling headphones',
+  'Budget smartwatch under $100',
 ]
 
 const PLACEHOLDER_TEXTS = [
@@ -19,7 +19,7 @@ const PLACEHOLDER_TEXTS = [
  * PreferenceInput
  * Apple-style prominent search pill. Bolder input, floating label feel.
  */
-export default function PreferenceInput({ onSubmit, isLoading }) {
+export default function PreferenceInput({ onSubmit, isLoading, status, matchCount }) {
   const [value, setValue] = useState('')
   const [placeholderIndex, setPlaceholderIndex] = useState(0)
   const inputRef = useRef(null)
@@ -43,6 +43,8 @@ export default function PreferenceInput({ onSubmit, isLoading }) {
     setValue(prompt)
     onSubmit(prompt)
   }
+
+  const showSuggestions = status === 'idle' || status === 'error' || (status === 'success' && matchCount === 0)
 
   return (
     <div className="search-container">
@@ -85,25 +87,27 @@ export default function PreferenceInput({ onSubmit, isLoading }) {
         </div>
       </motion.form>
 
-      <motion.div
-        className="search-suggestions"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.4, duration: 0.6 }}
-      >
-        <span className="search-suggestions__label">Try:</span>
-        {EXAMPLE_PROMPTS.map((prompt) => (
-          <button
-            key={prompt}
-            type="button"
-            className="search-chip"
-            onClick={() => handleExampleClick(prompt)}
-            disabled={isLoading}
-          >
-            {prompt}
-          </button>
-        ))}
-      </motion.div>
+      {showSuggestions && (
+        <motion.div
+          className="search-suggestions"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.4, duration: 0.6 }}
+        >
+          <span className="search-suggestions__label">Try:</span>
+          {EXAMPLE_PROMPTS.map((prompt) => (
+            <button
+              key={prompt}
+              type="button"
+              className="search-chip"
+              onClick={() => handleExampleClick(prompt)}
+              disabled={isLoading}
+            >
+              {prompt}
+            </button>
+          ))}
+        </motion.div>
+      )}
     </div>
   )
 }

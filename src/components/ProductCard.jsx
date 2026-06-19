@@ -41,7 +41,7 @@ const ProductCard = memo(function ProductCard({ product, isRecommended, onClick 
             <svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor">
               <path d="M8 1.5l1.85 4.1L14.2 6l-3.1 2.85.85 4.15L8 10.75 4.05 13l.85-4.15L1.8 6l4.35-.4z" />
             </svg>
-            AI Match
+            {product.matchScore ? `${product.matchScore}% Match` : 'AI Match'}
           </span>
         )}
         

@@ -8,7 +8,33 @@ import ProductCard from './ProductCard'
  * in/out as filters change. Wrapped in memo to prevent heavy 
  * framer-motion layout measurements on unrelated App re-renders.
  */
-export default memo(function ProductGrid({ products, recommendedIds, onProductClick }) {
+export default memo(function ProductGrid({ products, recommendedIds, onProductClick, isLoading }) {
+  if (isLoading) {
+    return (
+      <div className="product-grid">
+        <AnimatePresence mode="popLayout">
+          {Array.from({ length: 4 }).map((_, i) => (
+            <motion.div
+              key={`skeleton-${i}`}
+              className="product-card skeleton-card"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.9 }}
+              transition={{ duration: 0.4, delay: i * 0.05 }}
+            >
+              <div className="skeleton-image" />
+              <div className="skeleton-text-stack">
+                <div className="skeleton-text-title" />
+                <div className="skeleton-text-price" />
+                <div className="skeleton-text-cta" />
+              </div>
+            </motion.div>
+          ))}
+        </AnimatePresence>
+      </div>
+    )
+  }
+
   if (products.length === 0) {
     return (
       <div className="empty-state">
@@ -34,5 +60,4 @@ export default memo(function ProductGrid({ products, recommendedIds, onProductCl
       </AnimatePresence>
     </div>
   )
-}
-)
+})

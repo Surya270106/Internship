@@ -24,6 +24,8 @@ export default function App() {
     status,
     isLoading,
     recommendedIds,
+    recommendations,
+    explanation,
     reason,
     error,
     history,
@@ -44,8 +46,17 @@ export default function App() {
 
   const recommendedIdSet = useMemo(() => new Set(recommendedIds), [recommendedIds])
 
+  const recommendationScores = useMemo(() => {
+    const scores = new Map()
+    recommendations.forEach((r) => scores.set(r.id, r.matchScore))
+    return scores
+  }, [recommendations])
+
   const visibleProducts = useMemo(() => {
-    let list = PRODUCTS
+    let list = PRODUCTS.map((p) => ({
+      ...p,
+      matchScore: recommendationScores.get(p.id)
+    }))
 
     // Filter by category
     if (activeCategory !== 'All') {
@@ -57,21 +68,25 @@ export default function App() {
       list = [...list].sort((a, b) => {
         const aMatch = recommendedIdSet.has(a.id) ? 0 : 1
         const bMatch = recommendedIdSet.has(b.id) ? 0 : 1
+        
+        if (aMatch === 0 && bMatch === 0) {
+           return (b.matchScore || 0) - (a.matchScore || 0)
+        }
         return aMatch - bMatch
       })
-    }
-
-    // Apply user sort
-    if (sortOrder === 'price-asc') {
-      list = [...list].sort((a, b) => a.price - b.price)
-    } else if (sortOrder === 'price-desc') {
-      list = [...list].sort((a, b) => b.price - a.price)
-    } else if (sortOrder === 'rating-desc') {
-      list = [...list].sort((a, b) => b.rating - a.rating)
+    } else {
+      // Apply user sort only if no active AI recommendations are sorting it
+      if (sortOrder === 'price-asc') {
+        list = [...list].sort((a, b) => a.price - b.price)
+      } else if (sortOrder === 'price-desc') {
+        list = [...list].sort((a, b) => b.price - a.price)
+      } else if (sortOrder === 'rating-desc') {
+        list = [...list].sort((a, b) => b.rating - a.rating)
+      }
     }
 
     return list
-  }, [activeCategory, sortOrder, status, recommendedIdSet])
+  }, [activeCategory, sortOrder, status, recommendedIdSet, recommendationScores])
 
   return (
     <div className="app">
@@ -112,7 +127,12 @@ export default function App() {
               Tell the AI what you need, and find exactly what you're looking for.
             </motion.p>
 
-            <PreferenceInput onSubmit={fetchRecommendations} isLoading={isLoading} />
+            <PreferenceInput 
+              onSubmit={fetchRecommendations} 
+              isLoading={isLoading} 
+              status={status} 
+              matchCount={recommendedIds.length} 
+            />
           </div>
         </section>
 
@@ -121,6 +141,7 @@ export default function App() {
           <RecommendationPanel
             status={status}
             reason={reason}
+            explanation={explanation}
             error={error}
             matchCount={recommendedIds.length}
             onClear={reset}
@@ -161,6 +182,7 @@ export default function App() {
                 products={visibleProducts}
                 recommendedIds={recommendedIdSet}
                 onProductClick={setSelectedProduct}
+                isLoading={isLoading}
               />
             </div>
 
@@ -197,3 +219,4 @@ export default function App() {
     </div>
   )
 }
+
