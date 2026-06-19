@@ -2,10 +2,10 @@ import { useState, useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
 
 const EXAMPLE_PROMPTS = [
-  'Best phone under $500',
+  'Best phone under $1000',
   'Lightweight laptop for students',
   'Noise-cancelling headphones',
-  'Budget smartwatch under $100',
+  'Affordable smartwatch under $400',
 ]
 
 const PLACEHOLDER_TEXTS = [
