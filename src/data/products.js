@@ -48,7 +48,7 @@ export const PRODUCTS = [
     category: 'Laptops',
     price: 1299,
     rating: 4.8,
-    image: 'https://www.apple.com/newsroom/images/product/mac/macbook-air/Apple-MacBook-Air-M3-hero-240304_big.jpg.large.jpg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/e/e0/M2_Macbook_Air_Midnight_model_-_1.jpg',
     url: 'https://www.apple.com/shop/buy-mac/macbook-air/15-inch-m3',
     description: 'Incredibly thin and light. Supercharged by M3. 18 hours of battery life.',
   },
