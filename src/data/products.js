@@ -12,7 +12,7 @@ export const PRODUCTS = [
     category: 'Phones',
     price: 1199,
     rating: 4.9,
-    image: 'https://images.unsplash.com/photo-1696446702169-4d5e88a76e60?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=800&q=80',
     description: 'Titanium design. A17 Pro chip. The ultimate iPhone with 5x Optical Zoom.',
   },
   {
@@ -30,7 +30,7 @@ export const PRODUCTS = [
     category: 'Phones',
     price: 1299,
     rating: 4.8,
-    image: 'https://images.unsplash.com/photo-1707028448767-f311c1d0edbc?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?w=800&q=80',
     description: 'Galaxy AI is here. Titanium exterior, flat display, and built-in S Pen.',
   },
   {
@@ -39,7 +39,7 @@ export const PRODUCTS = [
     category: 'Phones',
     price: 999,
     rating: 4.7,
-    image: 'https://images.unsplash.com/photo-1696509528129-c28faebcb3ee?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=800&q=80',
     description: 'The pro-level Pixel with advanced AI photography and a polished aluminum frame.',
   },
   {
@@ -48,7 +48,7 @@ export const PRODUCTS = [
     category: 'Phones',
     price: 599,
     rating: 4.5,
-    image: 'https://images.unsplash.com/photo-1688649479366-2244bb4f1bb5?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&q=80',
     description: 'Iconic transparent design with Glyph Interface and premium Snapdragon power.',
   },
 
@@ -95,7 +95,7 @@ export const PRODUCTS = [
     category: 'Laptops',
     price: 1999,
     rating: 4.5,
-    image: 'https://images.unsplash.com/photo-1633182186847-2b7405232a51?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=800&q=80',
     description: 'Incredibly powerful and infinitely flexible. The ultimate creator laptop.',
   },
 
@@ -106,7 +106,7 @@ export const PRODUCTS = [
     category: 'Audio',
     price: 249,
     rating: 4.8,
-    image: 'https://images.unsplash.com/photo-1606220588913-b3eea4ce4ca7?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1600294037681-c80b4cb5b434?w=800&q=80',
     description: 'Up to 2x more Active Noise Cancellation. Adaptive Audio. USB-C.',
   },
   {
@@ -115,7 +115,7 @@ export const PRODUCTS = [
     category: 'Audio',
     price: 549,
     rating: 4.7,
-    image: 'https://images.unsplash.com/photo-1613040809024-b4ae999c0823?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=800&q=80',
     description: 'High-fidelity audio. Active Noise Cancellation with Transparency mode.',
   },
   {
@@ -153,7 +153,7 @@ export const PRODUCTS = [
     category: 'Wearables',
     price: 799,
     rating: 4.9,
-    image: 'https://images.unsplash.com/photo-1434493789847-2f02b9ea3b7a?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?w=800&q=80',
     description: 'Rugged titanium case. Precision dual-frequency GPS. Up to 36 hours of battery.',
   },
   {
@@ -171,7 +171,7 @@ export const PRODUCTS = [
     category: 'Wearables',
     price: 299,
     rating: 4.6,
-    image: 'https://images.unsplash.com/photo-1599643478514-4a4204b77e26?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1601158935942-52255782d322?w=800&q=80',
     description: 'Discreet, accurate health tracking. Sleep, activity, and readiness insights.',
   },
   {
@@ -189,7 +189,7 @@ export const PRODUCTS = [
     category: 'Wearables',
     price: 239,
     rating: 4.5,
-    image: 'https://images.unsplash.com/photo-1575311373937-040b8e1fd5b0?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1510017803434-a899398421b3?w=800&q=80',
     description: 'Personalized fitness and health coaching. Screen-free design.',
   },
 
@@ -209,7 +209,7 @@ export const PRODUCTS = [
     category: 'Tablets',
     price: 599,
     rating: 4.8,
-    image: 'https://images.unsplash.com/photo-1588702545922-e61a6b41295b?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1589739900243-4b52cd9b104e?w=800&q=80',
     description: 'Redesigned in two sizes. M2 chip. Landscape front camera.',
   },
   {
@@ -236,7 +236,7 @@ export const PRODUCTS = [
     category: 'Tablets',
     price: 299,
     rating: 4.5,
-    image: 'https://images.unsplash.com/photo-1585776269225-b44c21e51351?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1544816155-12df9643f363?w=800&q=80',
     description: 'The next-generation paper tablet. Replace your notebooks and printed documents.',
   },
 
@@ -256,7 +256,7 @@ export const PRODUCTS = [
     category: 'Desktops',
     price: 1999,
     rating: 4.9,
-    image: 'https://images.unsplash.com/photo-1647413661168-3e4b7b7ecb02?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1517059224940-d4af9eec41b7?w=800&q=80',
     description: 'Empowerment station. Outrageous performance in a compact form factor.',
   },
   {
@@ -265,7 +265,7 @@ export const PRODUCTS = [
     category: 'Desktops',
     price: 1599,
     rating: 4.6,
-    image: 'https://images.unsplash.com/photo-1652516487140-561b36914b18?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800&q=80',
     description: '27-inch 5K Retina display. 12MP Ultra Wide camera with Center Stage.',
   },
 
@@ -285,7 +285,7 @@ export const PRODUCTS = [
     category: 'Accessories',
     price: 79,
     rating: 4.1,
-    image: 'https://images.unsplash.com/photo-1527814050087-379381547339?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=800&q=80',
     description: 'Wireless and rechargeable, with an optimized foot design that lets it glide smoothly.',
   },
   {
@@ -294,7 +294,7 @@ export const PRODUCTS = [
     category: 'Accessories',
     price: 129,
     rating: 4.8,
-    image: 'https://images.unsplash.com/photo-1616423640778-28d1b53229bd?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1563206767-5b18f218e8de?w=800&q=80',
     description: 'Pixel-perfect precision. Squeeze, barrel roll, and haptic feedback.',
   },
   {
@@ -303,7 +303,7 @@ export const PRODUCTS = [
     category: 'Accessories',
     price: 39,
     rating: 4.7,
-    image: 'https://images.unsplash.com/photo-1620610738604-031f71dfb3dd?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1583394838336-acd977736f90?w=800&q=80',
     description: 'Perfectly aligned magnets attach to your iPhone for faster wireless charging.',
   }
 ]
