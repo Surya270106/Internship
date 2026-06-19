@@ -31,6 +31,7 @@ export default function ProductCard({ product, isRecommended, onClick }) {
           className={`product-card__image ${imageLoaded ? 'loaded' : ''}`}
           onLoad={() => setImageLoaded(true)}
           loading="lazy"
+          referrerPolicy="no-referrer"
         />
       </div>
 

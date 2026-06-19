@@ -50,7 +50,12 @@ export default function ProductModal({ product, isRecommended = false, onClose }
             </button>
 
             <div className="modal__image-wrap">
-              <img src={product.image} alt={product.name} className="modal__image" />
+              <img 
+                src={product.image} 
+                alt={product.name} 
+                className="modal__image" 
+                referrerPolicy="no-referrer" 
+              />
             </div>
 
             <div className="modal__body">
