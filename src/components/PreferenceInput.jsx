@@ -2,23 +2,22 @@ import { useState, useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
 
 const EXAMPLE_PROMPTS = [
-  'I want a phone under $500',
-  'Recommend a gaming laptop under $1200',
-  'Show me budget headphones with ANC',
-  'Best tablet for streaming',
+  'iPhone under $800',
+  'MacBook for creators',
+  'Headphones with ANC',
+  'Best fitness watch',
 ]
 
 const PLACEHOLDER_TEXTS = [
-  '"I need a phone under $500"',
-  '"Gaming laptop with good thermals"',
-  '"Budget headphones with noise cancelling"',
-  '"Best smartwatch for fitness"',
+  'What are you looking for?',
+  'e.g. "I need a new phone under $800"',
+  'e.g. "Gaming laptop with great thermals"',
+  'e.g. "Wireless headphones with ANC"',
 ]
 
 /**
  * PreferenceInput
- * The primary interaction surface — a clean search bar with cycling
- * placeholder text and one-click example chips.
+ * Apple-style prominent search pill. Bolder input, floating label feel.
  */
 export default function PreferenceInput({ onSubmit, isLoading }) {
   const [value, setValue] = useState('')
@@ -46,52 +45,58 @@ export default function PreferenceInput({ onSubmit, isLoading }) {
   }
 
   return (
-    <div className="search-bar">
+    <div className="search-container">
       <motion.form
-        className="search-bar__input-wrap"
+        className="search-bar"
         onSubmit={handleSubmit}
-        initial={{ opacity: 0, y: 10 }}
+        initial={{ opacity: 0, y: 15 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.3, duration: 0.5 }}
+        transition={{ delay: 0.2, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
       >
-        {/* Search icon */}
-        <svg className="search-bar__icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.8">
-          <circle cx="8.5" cy="8.5" r="5.5" />
-          <path d="M12.5 12.5L17 17" strokeLinecap="round" />
-        </svg>
+        <div className="search-bar__inner">
+          {/* Apple-style thin search glyph */}
+          <svg className="search-bar__icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5">
+            <circle cx="8.5" cy="8.5" r="5.5" />
+            <path d="M12.5 12.5L17 17" strokeLinecap="round" />
+          </svg>
 
-        <input
-          ref={inputRef}
-          type="text"
-          className="search-bar__input"
-          placeholder={PLACEHOLDER_TEXTS[placeholderIndex]}
-          value={value}
-          onChange={(e) => setValue(e.target.value)}
-          disabled={isLoading}
-          aria-label="Describe what product you are looking for"
-        />
+          <input
+            ref={inputRef}
+            type="text"
+            className="search-bar__input"
+            placeholder={PLACEHOLDER_TEXTS[placeholderIndex]}
+            value={value}
+            onChange={(e) => setValue(e.target.value)}
+            disabled={isLoading}
+            aria-label="Describe what product you are looking for"
+          />
 
-        <button
-          type="submit"
-          className="search-bar__submit"
-          disabled={isLoading || !value.trim()}
-        >
-          {isLoading ? 'Searching...' : 'Search'}
-        </button>
+          <button
+            type="submit"
+            className="search-bar__submit"
+            disabled={isLoading || !value.trim()}
+          >
+            {isLoading ? (
+              <span className="spinner"></span>
+            ) : (
+              'Search'
+            )}
+          </button>
+        </div>
       </motion.form>
 
       <motion.div
-        className="search-bar__examples"
+        className="search-suggestions"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 0.5, duration: 0.4 }}
+        transition={{ delay: 0.4, duration: 0.6 }}
       >
-        <span className="search-bar__examples-label">Try:</span>
+        <span className="search-suggestions__label">Try:</span>
         {EXAMPLE_PROMPTS.map((prompt) => (
           <button
             key={prompt}
             type="button"
-            className="example-chip"
+            className="search-chip"
             onClick={() => handleExampleClick(prompt)}
             disabled={isLoading}
           >

@@ -75,110 +75,117 @@ export default function App() {
 
   return (
     <div className="app">
-      {/* ── Header ──────────────────────────────────────────────── */}
-      <header className="app-header">
-        <div className="app-header__inner">
-          <div className="app-header__brand">
-            <span className="app-header__name">Spearmint Finds</span>
-            <span className="app-header__tag">AI</span>
-          </div>
-          <div className="app-header__actions">
-            <DarkModeToggle isDark={isDark} onToggle={() => setIsDark((d) => !d)} />
-          </div>
+      {/* ── Global Nav ──────────────────────────────────────────── */}
+      <nav className="global-nav">
+        <div className="global-nav__inner">
+          <span className="global-nav__logo">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+              <path d="M12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/>
+            </svg>
+            Store
+          </span>
+          <DarkModeToggle isDark={isDark} onToggle={() => setIsDark((d) => !d)} />
         </div>
-      </header>
+      </nav>
 
       {/* ── Main ───────────────────────────────────────────────── */}
       <main className="app-main">
-        {/* Hero / Search section */}
-        <section className="hero">
-          <motion.p
-            className="hero__eyebrow"
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            AI-Powered Shopping
-          </motion.p>
+        {/* Product Tile Hero section */}
+        <section className="hero-tile">
+          <div className="hero-tile__content">
+            <motion.h1
+              className="hero-tile__title"
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+            >
+              Shop intelligently.
+            </motion.h1>
 
-          <motion.h1
-            className="hero__title"
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-          >
-            Find the <em>perfect</em> product.
-          </motion.h1>
+            <motion.p
+              className="hero-tile__subtitle"
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+            >
+              Tell the AI what you need, and find exactly what you're looking for.
+            </motion.p>
 
-          <motion.p
-            className="hero__subtitle"
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
-            Describe what you need in plain language. The assistant recommends
-            products from the catalog that match your requirements.
-          </motion.p>
-
-          <PreferenceInput onSubmit={fetchRecommendations} isLoading={isLoading} />
+            <PreferenceInput onSubmit={fetchRecommendations} isLoading={isLoading} />
+          </div>
         </section>
 
-        {/* Recommendation result panel */}
-        <RecommendationPanel
-          status={status}
-          reason={reason}
-          error={error}
-          matchCount={recommendedIds.length}
-          onClear={reset}
-        />
+        <div className="content-container">
+          {/* Recommendation result panel */}
+          <RecommendationPanel
+            status={status}
+            reason={reason}
+            error={error}
+            matchCount={recommendedIds.length}
+            onClear={reset}
+          />
 
-        {/* Share button — visible when recommendations are active */}
-        {status === 'success' && recommendedIds.length > 0 && (
+          {/* Share button */}
+          {status === 'success' && recommendedIds.length > 0 && (
+            <motion.div
+              style={{ margin: '0 auto 40px', textAlign: 'right' }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.3 }}
+            >
+              <ShareButton
+                recommendedIds={recommendedIds}
+                reason={reason}
+                products={PRODUCTS}
+              />
+            </motion.div>
+          )}
+
+          {/* Product grid + sidebar */}
           <motion.div
-            style={{ maxWidth: 640, margin: '0 auto 24px', textAlign: 'right' }}
+            className="content-layout"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.3 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <ShareButton
-              recommendedIds={recommendedIds}
-              reason={reason}
-              products={PRODUCTS}
-            />
+            <div className="content-layout__main">
+              <FilterBar
+                categories={CATEGORIES}
+                activeCategory={activeCategory}
+                onCategoryChange={setActiveCategory}
+                sortOrder={sortOrder}
+                onSortChange={setSortOrder}
+              />
+              <ProductGrid
+                products={visibleProducts}
+                recommendedIds={recommendedIdSet}
+                onProductClick={setSelectedProduct}
+              />
+            </div>
+
+            <aside className="content-layout__sidebar">
+              <HistoryList history={history} onSelect={fetchRecommendations} />
+            </aside>
           </motion.div>
-        )}
-
-        {/* Product grid + sidebar */}
-        <motion.div
-          className="content-layout"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-        >
-          <div className="content-layout__main">
-            <FilterBar
-              categories={CATEGORIES}
-              activeCategory={activeCategory}
-              onCategoryChange={setActiveCategory}
-              sortOrder={sortOrder}
-              onSortChange={setSortOrder}
-            />
-            <ProductGrid
-              products={visibleProducts}
-              recommendedIds={recommendedIdSet}
-              onProductClick={setSelectedProduct}
-            />
-          </div>
-
-          <aside className="content-layout__sidebar">
-            <HistoryList history={history} onSelect={fetchRecommendations} />
-          </aside>
-        </motion.div>
+        </div>
       </main>
 
       {/* ── Footer ─────────────────────────────────────────────── */}
-      <footer className="app-footer">
-        <p>Built for the Spearmint Technologies internship assessment.</p>
+      <footer className="footer-parchment">
+        <div className="footer-parchment__inner">
+          <p>More ways to shop: find an Apple Store or other retailer near you. Or call 1-800-MY-APPLE.</p>
+          <div className="footer-parchment__legal">
+            <span>Copyright © 2026 Spearmint Technologies Inc. All rights reserved.</span>
+            <div className="footer-parchment__links">
+              <a href="#">Privacy Policy</a>
+              <a href="#">Terms of Use</a>
+              <a href="#">Sales and Refunds</a>
+              <a href="#">Legal</a>
+              <a href="#">Site Map</a>
+            </div>
+          </div>
+        </div>
       </footer>
 
       {/* ── Product detail modal ───────────────────────────────── */}
