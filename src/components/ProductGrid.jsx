@@ -1,12 +1,14 @@
+import { memo } from 'react'
 import { AnimatePresence } from 'framer-motion'
 import ProductCard from './ProductCard'
 
 /**
  * ProductGrid
  * Renders the product catalog with AnimatePresence so cards animate
- * in/out as filters change.
+ * in/out as filters change. Wrapped in memo to prevent heavy 
+ * framer-motion layout measurements on unrelated App re-renders.
  */
-export default function ProductGrid({ products, recommendedIds = new Set(), onProductClick }) {
+export default memo(function ProductGrid({ products, recommendedIds, onProductClick }) {
   if (products.length === 0) {
     return (
       <div className="empty-state">
